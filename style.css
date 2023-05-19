@@ -1,0 +1,140 @@
+.testimonials-container {
+  max-width: 900px;
+  margin: 24px auto;
+  line-height: 1.9;
+  font-family: "Roboto", sans-serif;
+}
+
+.testimonials-container section {
+  padding: 20px 0;
+}
+
+.testimonials-container h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.testimonials-container h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 60px;
+  background: red;
+  bottom: -8px;
+  left: 0;
+}
+
+section.dark h2::before {
+  height: 0;
+}
+
+.testimonials-container .logos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  place-items: center;
+  padding: 32px;
+  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-container .logos-container img {
+  height: 30px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.testimonial video {
+  height: 220px;
+}
+
+.testimonial {
+  flex: 1;
+  padding: 16px;
+  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial .video {
+  margin: -16px;
+  margin-bottom: 0;
+}
+
+.testimonial .bottom {
+  margin-top: auto;
+}
+
+.testimonial .name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.testimonial .designation {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.testimonials-container button,
+.testimonials-container a.btn {
+  padding: 8px 32px;
+  border: none;
+  margin: 24px 0;
+  font-size: 16px;
+  background: #003049;
+  color: #fff;
+  cursor: pointer;
+}
+
+.testimonials-container a.btn {
+  text-decoration: none;
+  background: #e63946;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 32px;
+  margin-top: 8px;
+}
+
+section.dark {
+  background: #003049;
+  color: #fff;
+  padding: 24px 32px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+section.dark p {
+  margin-top: -16px;
+}
+
+@media (max-width: 800px) {
+  .testimonials-container h2 {
+    font-size: 28px;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial video {
+    height: 100%;
+  }
+
+  .testimonial {
+    gap: 12px;
+  }
+
+  .testimonials-container .logos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
